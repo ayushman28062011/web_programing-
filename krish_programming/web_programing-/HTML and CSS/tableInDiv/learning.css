@@ -1,0 +1,24 @@
+div {
+    height:20px;
+    width:14%; 
+    border: 1px solid black;
+    float: left;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10.5px;
+    vertical-align: middle;
+}
+
+#header {
+    background-color: #183bd6;
+    font-weight: bold;
+    color: white;
+
+}
+#even-row {
+    background-color: white 
+}
+
+#odd-row {
+    background-color: #0aeeeee1 ;
+}
