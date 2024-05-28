@@ -137,11 +137,144 @@
             var myArray = ["Ayushman", 2];
 
             //Nested Arrays
-            var myData = ["Ayushman", 1 , "Family"];
-            console.log (myData[2]);
+            var myData = [["Ayushman", 1 , "Family"] , ["Duguu" , 2 , "Home"]];
+
+            //Access Array Data
+            var OurData = [36,552,56]
+            var MyArrayes = OurData[1]
+            console.log (MyArrayes)
 
             //Modify Arrays Data with Indexes
             var myIndexes = [96,56,93,75]
+            myIndexes[2] = 95
+            console.log (myIndexes)
+
+            //Access Multidimensional Arrays with Indexes
+            var thatArray = [[[1,2,3], [4,5,6]] , [[7,8,9], [10,11,12]]]
+            var thisData = thatArray[0][1][2]
+            console.log (thisData)
+
+            //Manuplate Arrays with push()
+            var thisArray = ["Stimspon" , "cat"]
+            thisArray.push(["happy" , "joy"])
+            console.log(thisArray)
+
+            //Manuplate Data with pop()
+            var thoseArray = [["M.S","Dhoni"], ["Virat" , "Kohil"]]
+            var removedfromthoseArray = thoseArray.pop()
+            console.log (thoseArray)
+
+            //Manuplate Data with Shift()
+            var thseArray = [["M.S","Dhoni"], ["Virat" , "Kohil"]]
+            var removedfromthseArray = thseArray.shift()
+            console.log (thseArray)
+            
+            //Manuplate Data with unshift()
+            var thatArray = ["Stimspon" , "cat"]
+            thatArray.shift()
+            thatArray.unshift(["happy" , "joy"])
+            console.log(thatArray)
+
+            //Shopping List
+            var myList = [["Rice" , 2] , ["Chocolates" , "5"] , ["Burger" , "5"] , ["CocaCola" , "3"]] 
+
+            //Write Reusable Code with Functions
+            function reusablefunction() {
+                console.log ("je" , "parle" , "en" , "Français" , "langue")
+            }
+            reusablefunction()
+            reusablefunction()
+            reusablefunction()
+            
+            //Loops
+
+                //While loop
+
+                    //Counting From 1
+                    var a = 1;
+                    while (a <= 5) {
+                        console.log (a +  " Hello ");
+                        a++;
+                    } 
+
+                    //Backward Counting
+                    var a = 5;
+                    while (a >= 1) {
+                        console.log (a +  " Hello ");
+                        a--;
+                    }
+
+                //Do/While loop
+
+                    // Counting from 1
+                    var a = 1 
+                    do {
+                        console.log (a +  " Hello ")
+                        a++;
+                    }while(a <= 5)
+
+                    //Backward Counting
+                    var a = 5
+                    do {
+                        console.log (a +  " Hello ")
+                        a--;
+                    }while(a >= 1)
+
+                //For loop
+
+                    //Counting From 1
+                    for (var a = 1; a <= 5; a++){
+                        console.log (a +  " Hello" )
+                    }
+
+                    //Backward Counting
+                    for (var a = 5; a >= 1; a--){
+                        console.log (a +  " Hello" )
+                    }
+
+                //Array - forEach() function
+
+                    var a = ["Ayushman" , "Coding" , "loop"]
+
+                    a.forEach (function(word , index){
+                        console.log(index + ":" + word + "<br>");
+                    })
+
+                //For/in loop
+
+                    var obj = {
+                        Name : "Ayushman" ,
+                        Nickname : "Krish" ,
+                        Country : "India" ,
+                        Email : "mishra.ayushman.krish@gmail.com"
+                    }
+
+                    for (var key in obj) {
+                        console.log(key + ":" + obj [key] )
+                    }
+
+                //print if a is even
+                var b = [3 , 2 , 9 , 8 , 46 , 12 , 75 , 56];
+                var i = 0;
+                while (i < b.length) {       
+                    if (b[i] % 2 == 0) {
+                        console.log(b[i] + " :- Even");
+                    } else {
+                        console.log(b[i] + " :- Odd") 
+                    } 
+                    i++;
+                }
+                
+                //print if a is even (loop)
+                var c = [2 , 751 , 9345 , 504 , 824];
+                for (var k = 0; k <= c.length ; k++ ) {
+                    if (c[k] % 2 == 0) {
+                        console.log (c[k] + " :- Even");
+                    } else {
+                        console.log(c[k] + " :- Odd")
+                    } 
+                }
          </script>
     </body>
-</html>-->
+</html>
+

@@ -1,0 +1,18 @@
+<html>
+    <title>Calculator</title>
+    <head>
+        <script type="text/javascript" src="calculator.js"></script>
+    </head>
+    <body>
+        <div style="height: 300px; width: 700px; border: 1px solid black;">
+            <input type="text" id="numberOnly" onkeypress="validateInput(event)" placeholder="Please type only numbers" style="height: 40px; width: 155px; margin: 1%">
+            <select id="options" name="options" style="height: 39px; width: 100px; ">
+            <option value="option1">+</option>
+            <option value="option2">-</option>
+            <option value="option3">x</option>
+            <option value="option4">÷</option>
+            <input type="text" id="numberOnly" onkeypress="validatenumbers(event)" placeholder="Please type only numbers" style="height: 40px; width: 155px; margin: 1%; margin-left: 10%; margin-right: 1%;">
+            <button style="height: 40px; width: 52px;">=</button>
+            <input type="text" id="display" style="height: 40px; width: 125px; margin-right: 1%; ">
+    </body>
+</html>
