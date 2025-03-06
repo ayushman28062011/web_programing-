@@ -5,13 +5,13 @@ function calculate() {
     let finalValue;
 
     switch (options) {
-        case "+": finalValue = add(num1, num2);break;
+        case "+": finalValue = add(num1, num2); break;
         
-        case "-": finalValue = subtract(num1, num2);break;
+        case "-": finalValue = subtract(num1, num2); break;
         
-        case "*": finalValue = multiply(num1, num2);break;
+        case "*": finalValue = multiply(num1, num2); break;
         
-        case "/": finalValue = divide(num1, num2);break;
+        case "/": finalValue = divide(num1, num2); break;
         
     }
     printFinalValue(finalValue);
