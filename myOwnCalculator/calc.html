@@ -1,24 +1,29 @@
 <html>
-    <head>
-        <script src="js/calc.js" defer></script> 
-    </head>
-    <body>
-        <input type="number" id="num1" name="number1" value=""/>
-        &nbsp;
-        <select id="options" name="options">
-            <option value="+"> + </option>
-            <option value="-"> - </option>
-            <option value="*"> X </option>
-            <option value="/"> / </option>
-            <option value="^">^</option>
-            <option value="√">√</option>
-            <option value="%">%</option>
-            <option value="!">!</option>
-        </select>
-        &nbsp;
-        <input type="number" id="num2" name="number2" value=""/>
-        &nbsp;
-        <input type="button" name="equals" value="=" onclick="calculate()"/>
-        &nbsp;
-        <input type="text" id="calc" name="calc" value="" /> 
+<head>
+    <script src="js/calc.js" defer></script> 
+    <link rel="stylesheet" href="css/calc.css">
+    <title>Calculator</title>
+</head>
+<body>
+        <div id="Top-div"> <u>Calculator</u></div>
+        <div id="Left-div"></div>
+        <div id="Main-div">
+            <input type="number" id="num1" name="number1" value=""/>
+            <select id="options" name="options">
+                <option value="+"> + </option>
+                <option value="-"> - </option>
+                <option value="*"> X </option>
+                <option value="/"> / </option>
+                <option value="^">^</option>
+                <option value="√">√</option>
+                <option value="%">%</option>
+                <option value="!">!</option>
+            </select>
+            <input type="number" id="num2" name="number2" value=""/>
+            <input type="button" name="equals" value="=" onclick="calculate()"/>
+            <input type="text" id="calc" name="calc" value="" /> 
+        </div>
+        <div id="Right-div"></div>
+    </div>
+</body>
 </html>
