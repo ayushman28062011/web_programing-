@@ -13,9 +13,17 @@ document.addEventListener("DOMContentLoaded", function() {
 })
 function calculate() {
         let options = document.getElementById("options").value;
-        let num1 = parseFloat(document.getElementById("num1").value);
-        let num2 = parseFloat(document.getElementById("num2").value);
+        let num1 = (document.getElementById("num1").value);
+        let num2 = (document.getElementById("num2").value);
         let finalValue; 
+
+        if ((num1 === "" || num2 === "" ) && options !== "√" && options !== "!") {
+            document.getElementById("calc").value = "Fill the other placeholder";
+            return
+        }
+
+        num1= parseFloat(num1);
+        num2= parseFloat(num2);
 
         switch (options) {
             case "+": finalValue = add(num1, num2); break;
