@@ -3,95 +3,110 @@
     <head>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
         <title>Form using Div Tag</title>
-        <link rel="stylesheet" href="FormInDiv.css">
+        <link rel="stylesheet" href="css/FormInDiv.css">
     </head>
     <body>
-        <div style="width: 60%;">
-            <div style="width: 100%; font-weight: bolder; font-size: xx-large;">
+        <div style="width: 60%; border: 1px solid black;">
+            <div style="width: 100%; font-weight: bolder; font-size: xx-large; border: 1px solid black;">
                 St Xaviers high school
             </div>
-            <div style="width: 100%; font-size: x-large;">Report Card form</div>
+            <div style="width: 100%; font-size: x-large; border: 1px solid black;">Report Card form</div>
             <div style="width: 100%;">
                 <div style="width:2%; float: left; border: 0px;"> &nbsp;</div>
-                <div style="width: 45%; float: left;">
-                    <div style="width:80%;">Student Basic Details</div>
-                    <div style="width: 80%; border: 0px;">
-                        First Name: <input type="text">
-                    </div>
-                    <div>
-                        <label for="Name">Last Name</label>
-                        <input type="text">
-                    </div>
-                    <div>
-                        <label for="Roll">Roll no</label>
-                        <input type="text">
-                    </div>    
-                    <div>
-                        <label for="option">Std</label>
-                        <Select>
-                            <option value="--" selected="selected">--</option>
-                            <option value="I">I</option>
-                            <option value="II">II</option>
-                            <option value="III">III</option>
-                            <option value="IV">IV</option>
-                            <option value="V">V</option>
-                            <option value="VI">VI</option>
-                            <option value="VII">VII</option>
-                            <option value="VIII">VIII</option>
-                            <option value="IX">IX</option>
-                            <option value="X">XI</option>
-                            <option value="XI">XI</option>
-                            <option value="XII">XII</option>
-                        </Select>
-                    </div>
-                    <div>
-                        <label for="option">Sec</label>
-                        <Select>
-                            <option value="--" selected="selected">--</option>
-                            <option value="A">A</option>
-                            <option value="B">B</option>
-                            <option value="C">C</option>
-                            <option value="D">D</option>
-                            <option value="E">E</option>
-                            <option value="F">F</option>
-                        </Select>
-                    </div>
-                    <div style="border: 0px;height: 23px;">
-                        <label for="Gender">Gender</label>
-                        <input type="radio">Boy
-                        <input type="radio">Girl
-                        <input type="radio" def>None
-                    </div>
+                <div style="width: 45%; float: left; border: 1px solid black; width: 40%; height: 264px; padding-right: 10px;">
+                    <div style="width:100%; padding-bottom: 5px; border: 1px solid black; height: 22px; text-align: center;"><u>Student Basic Details</u></div>
+                        <div style="width: 80%; border: 0px;">
+                            First Name: <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Name">Last Name</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Roll">Roll no</label>
+                            <input type="text">
+                        </div> 
+                        &nbsp;
+                        <div>
+                            <label for="option">Std</label>
+                            <Select>
+                                <option value="--" selected="selected">--</option>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                                <option value="V">V</option>
+                                <option value="VI">VI</option>
+                                <option value="VII">VII</option>
+                                <option value="VIII">VIII</option>
+                                <option value="IX">IX</option>
+                                <option value="X">XI</option>
+                                <option value="XI">XI</option>
+                                <option value="XII">XII</option>
+                            </Select>
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="option">Sec</label>
+                            <Select>
+                                <option value="--" selected="selected">--</option>
+                                <option value="A">A</option>
+                                <option value="B">B</option>
+                                <option value="C">C</option>
+                                <option value="D">D</option>
+                                <option value="E">E</option>
+                                <option value="F">F</option>
+                            </Select>
+                        </div>
+                        &nbsp;
+                        <div style="border: 0px;height: 23px;">
+                            <label for="Gender">Gender</label>
+                            <input type="radio">Boy
+                            <input type="radio">Girl
+                            <input type="radio" def>None
+                        </div>
+                       
                 </div>
-                <div style="width:2%; float: left; border: 0px;"> &nbsp;</div>
-                <div style="width:45%; float: left; ">Test Marks</div>
-                <div>
-                    <label for="Marks">Maths</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Marks">S.S.T</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Marks">Science</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Marks">Hindi</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Marks">Odia</label>
-                    <input type="text">
-                </div>
-                <div>
-                    <label for="Marks">English</label>
-                    <input type="text">
-                </div>
+                <div style="border: 1px solid black;">
+                    <div style="border: 1px solid black; float: left;"></div>
+                    <div style="width:50%; padding: 5px; border: 1px solid black; float: left; text-align: center;"><u>Test Marks</u></div>
+                    <div style="border: 1px solid black; width: 51%; float: left;">
+                            <div style="width: 80%; border: 0px;">
+                                Maths <input type="text">
+                            </div>
+                        &nbsp;
+                        <div>
+                            <label for="Marks">S.S.T</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Marks">Science</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Marks">Hindi</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Marks">Odia</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                        <div>
+                            <label for="Marks">English</label>
+                            <input type="text">
+                        </div>
+                        &nbsp;
+                    </div> 
+                </div>       
             </div>
         </div>
-        <div style="border:0px;">
+        <div style="border:0px; float: right;">
             <input type="button" value="Submit">
         </div>
     </body>

@@ -1,8 +1,8 @@
 div {
-    border: 0.5px solid black;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border: 0px solid black;
 }
 
 #lower {
     float: left; padding: 4.5px; padding-left: 3%; 
 }
+
