@@ -65,3 +65,26 @@ function findMinMax(arr) {
     return { minValue,  maxValue };
 }
 
+function rotateArray (arr) {
+    let n = arr.length;
+    let array = new Array();
+
+    for (let i = 0 ; i < n ; i++) {
+        array [n - i - 1] = arr[i];
+    }
+    for (let i = 0 ; i < n ; i++) {
+        arr[i] = array[i];
+    }
+    return arr;
+}
+
+function rotateArrayWithoutTempArray (arr) {
+    let n = arr.length;
+
+    for (let i = 0 ; i < n / 2 ; i++) {
+        let c = arr[i]
+        arr [i] = arr [n - i - 1];
+        arr [n - i - 1] = c;
+    }
+    return arr;
+}
