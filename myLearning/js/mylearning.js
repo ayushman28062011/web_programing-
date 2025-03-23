@@ -30,7 +30,8 @@ function sqrt(n) {
     return 0;
 }
 
-function findingLargestValue(arr) {
+function findingLargestValue(arr) { 
+    if (arr.length === 0) return "Undefined"
     let maxValue = arr[0];
     for (let i = 1; i < arr.length; i++) { 
         if (arr[i] > maxValue) {
@@ -41,6 +42,7 @@ function findingLargestValue(arr) {
 }
 
 function findingSmallestValue(arr) {
+    if (arr.length === 0) return "Undefined"
     let minValue = arr[0];
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] < minValue) {
@@ -51,6 +53,7 @@ function findingSmallestValue(arr) {
 }
 
 function findMinMax(arr) {
+    if (arr.length === 0) return "Undefined"
     let minValue = arr[0];
     let maxValue = arr[0];
 
@@ -66,6 +69,7 @@ function findMinMax(arr) {
 }
 
 function rotateArray (arr) {
+    if (arr.length === 0) return "Undefined"
     let n = arr.length;
     let array = new Array();
 
@@ -79,6 +83,7 @@ function rotateArray (arr) {
 }
 
 function rotateArrayWithoutTempArray (arr) {
+    if (arr.length === 0) return "Undefined"
     let n = arr.length;
 
     for (let i = 0 ; i < n / 2 ; i++) {
@@ -87,4 +92,65 @@ function rotateArrayWithoutTempArray (arr) {
         arr [n - i - 1] = c;
     }
     return arr;
+}
+
+
+function secondMax(arr) {
+    let max = -Infinity;
+    let secondMax = -Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            secondMax = max;
+            max = arr[i];
+        } else {
+            if (arr[i] > secondMax && arr[i] < max) {
+                secondMax = arr[i];
+            }
+        }   
+    }
+    return secondMax
+}   
+
+function secondMin(arr) {
+    let min = Infinity;
+    let secondMin = Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < min) {
+            secondMin = min;
+            min = arr[i];
+        } else {
+            if (arr[i] > min && arr[i] < secondMin) {
+                secondMin = arr[i];
+            }
+        }
+    }
+    return secondMin
+}
+
+function secondMaxMin(arr) {
+
+    let max = -Infinity, secondMax = -Infinity;
+    let min = Infinity, secondMin = Infinity;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            secondMax = max;
+            max = arr[i];
+        } else if (arr[i] > secondMax && arr[i] < max) { 
+            secondMax = arr[i];
+        }
+
+        if (arr[i] < min) {
+            secondMin = min;
+            min = arr[i];
+        } else if (arr[i] > min && arr[i] < secondMin) { 
+            secondMin = arr[i];
+        }
+    }
+
+    return {
+        secondMax , secondMin
+    }
 }

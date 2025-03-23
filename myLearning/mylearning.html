@@ -1,9 +1,181 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>JS Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Console Commands</title>
+
+    <style>
+        /* Import Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        /* General Styling */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #121212; /* Dark Mode */
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Simple Glassmorphism */
+        .box {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Title Styles */
+        h2, h3 {
+            color: #FFD700;
+        }
+
+        /* Input Search Bar */
+        .search-box {
+            width: 80%;
+            padding: 10px;
+            border-radius: 6px;
+            border: 1px solid #FFD700;
+            font-size: 16px;
+            margin-bottom: 15px;
+            background: #222;
+            color: white;
+            text-align: center;
+        }
+
+        /* List Styling */
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 255, 255, 0.1);
+            margin: 6px 0;
+            padding: 12px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            display: none; /* Hidden until searched */
+        }
+
+        ul li:hover {
+            background: #FFD700;
+            color: black;
+        }
+
+        /* Button */
+        .btn {
+            background: #ff8008;
+            color: white;
+            padding: 12px 18px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.2s;
+            margin: 10px;
+        }
+
+        .btn:hover {
+            background: #ff6600;
+        }
+    </style>
 </head>
 <body>
     <script src="js/mylearning.js"></script>
+
+    <div class="container">
+        <!-- Title -->
+        <div class="box">
+            <h2>🚀 JavaScript Console Commands</h2>
+            <p>Click the button below to **open the console**!</p>
+            <button class="btn" onclick="openConsole()">🖥️ Open Console</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="box">
+            <h3>🔍 Search JavaScript Commands</h3>
+            <input type="text" id="searchBar" class="search-box" placeholder="Type to search..." onkeyup="filterCommands()">
+            <ul id="commandList"></ul>
+        </div>
+    </div>
+
+    <script>
+        // Detect the user's browser and show the correct shortcut
+        function openConsole() {
+            let userAgent = navigator.userAgent;
+            let shortcut;
+
+            if (userAgent.includes("Chrome") || userAgent.includes("Edge")) {
+                shortcut = "Press F12 or Ctrl + Shift + I to open the console.";
+            } else if (userAgent.includes("Firefox")) {
+                shortcut = "Press Ctrl + Shift + K (Windows/Linux) or Cmd + Option + K (Mac).";
+            } else if (userAgent.includes("Safari")) {
+                shortcut = "Enable Developer mode: Safari > Preferences > Advanced > Show Develop menu.\nThen press Cmd + Option + C.";
+            } else {
+                shortcut = "Try F12 or Ctrl + Shift + I to open the console.";
+            }
+
+            alert(shortcut);
+        }
+
+        // List of commands
+        const commands = [
+            "exchangeUsingThirdVariable(two variables)",
+            "exchangeWithoutUsingThirdVariable(two variables)",
+            "isPrime(number)",
+            "sqrt(number)",
+            "findingLargestValue(array)",
+            "findingSmallestValue(array)",
+            "findMinMax(array)",
+            "rotateArray(array, positions)",
+            "rotateArrayWithoutTempArray(array, positions)",
+            "secondMax(array)",
+            "secondMin(array)",
+            "secondMaxMin(array)"
+        ];
+
+        // Generate command list dynamically (Initially Hidden)
+        const commandList = document.getElementById("commandList");
+        commands.forEach(cmd => {
+            let li = document.createElement("li");
+            li.textContent = cmd;
+
+            // When clicked, it will directly execute in console
+            li.onclick = () => {
+                console.log(`Executing: ${cmd}`);
+                debugger; // Opens console and pauses execution
+                eval(cmd);
+            };
+
+            commandList.appendChild(li);
+        });
+
+        // Filter commands as the user types
+        function filterCommands() {
+            let input = document.getElementById("searchBar").value.toLowerCase();
+            let listItems = document.querySelectorAll("#commandList li");
+
+            listItems.forEach(li => {
+                if (li.textContent.toLowerCase().includes(input) && input.length > 0) {
+                    li.style.display = "block"; // Show only matching commands
+                } else {
+                    li.style.display = "none"; // Hide others
+                }
+            });
+        }
+    </script>
+
 </body>
 </html>
