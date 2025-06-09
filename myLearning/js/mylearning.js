@@ -154,3 +154,53 @@ function secondMaxMin(arr) {
         secondMax , secondMin
     }
 }
+
+function table(n) {
+    console.log("TABLE OF " + n);
+    for (let i = 1; i <= 10; i++) { 
+        console.log(n + " X " + i + " = " + n * i);
+    }
+
+    return "Table of " + n + " printed...";
+}
+
+
+function halfstarsUpwards() {
+    let n = 5;
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row +="*"
+        }
+        console.log(row)
+    }     
+}  
+
+function halfstarsDownward() {
+    let n = 5;
+    for (let i= 5 ; i >= 1; i--) {
+        let row = "";
+        for (let j = 1; j <= i ; j++) {
+            row +="*"
+        }
+        console.log(row)
+    }
+}   
+
+function halfstars() {
+    let n = 5;
+    for (let i = 1; i <= n; i++) {
+        let row = "";
+        for (let j = 1; j <= i; j++) {
+            row +="*"
+        }
+        console.log(row)
+    }  
+    for (let i=4; i >= 1; i--) {
+        let row = "";
+        for (let j = 1; j <= i ; j++) {
+            row +="*"   
+        }
+        console.log(row)
+    }
+}
