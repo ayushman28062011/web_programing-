@@ -53,19 +53,23 @@ function findingSmallestValue(arr) {
 }
 
 function findMinMax(arr) {
-    if (arr.length === 0) return "Undefined"
+    if (arr.length === 0) return "Undefined"            
     let minValue = arr[0];
+    let minValueIndex = 0; 
     let maxValue = arr[0];
+    let maxValueIndex = 0;
 
     for (let i = 1; i < arr.length; i++) {
         if (arr[i] < minValue) {
             minValue = arr[i];
+            minValueIndex = i;
         } else if (arr[i] > maxValue) {
             maxValue = arr[i];
+            maxValueIndex = i;
         }
     }
 
-    return { minValue,  maxValue };
+    return {minValueIndex, maxValueIndex};
 }
 
 function rotateArray (arr) {
@@ -148,7 +152,7 @@ function secondMaxMin(arr) {
         } else if (arr[i] > min && arr[i] < secondMin) { 
             secondMin = arr[i];
         }
-    }
+    }   
 
     return {
         secondMax , secondMin
@@ -163,7 +167,6 @@ function table(n) {
 
     return "Table of " + n + " printed...";
 }
-
 
 function halfstarsUpwards() {
     let n = 5;
@@ -203,4 +206,28 @@ function halfstars() {
         }
         console.log(row)
     }
+}
+
+function search(arr, n) {
+    for (let i = 0 ; i < arr.length; i++) {
+        if (arr[i] === n) {
+            return i;
+        }
+    } 
+    return -1;
+}
+
+function sort(arr) {
+    findMinMax(arr) 
+    findMinMax() = findMinMax(arr)
+    let bb = new Array
+    let n = arr.length
+    
+    for(let i = 0; i < n/2; i++) {
+        bb[i] = arr[findMinMax[min]]
+        bb[n - 1] = arr[findMinMax[max]]
+        arr[findMinMax[min]] = -1;
+        arr[findMinMax[max]] = -1;
+    }
+    return arr
 }
