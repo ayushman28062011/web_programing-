@@ -231,3 +231,8 @@ function sort(arr) {
     }
     return arr
 }
+
+function rotateArrayfromNposition (arr, n) {
+    if (arr.length === 0) return "undefined";
+    if (arr.length < n) return "undefined"
+}
